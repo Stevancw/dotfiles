@@ -1,0 +1,7 @@
+#Stevancw dotfiles
+
+These are the configuration files to do most of the heavy lifting so that things are more or less the way I like them.
+
+##Contents
+
+Contents include settings for vim in the terminal gvim (mvim), oh-my-zsh.
