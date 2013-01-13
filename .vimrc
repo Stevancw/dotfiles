@@ -49,4 +49,4 @@ vmap D y'>p
 imap <Tab> <C-N>
 imap <C-L> <Space>=><Space>
 
-
+colorscheme xoria256
