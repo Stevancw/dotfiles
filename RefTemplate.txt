@@ -1,0 +1,4 @@
+<$publications>
+<$Author.stringByRemovingCurlyBraces/>, <$Title.stringByRemovingCurlyBraces/>, <$Journal.stringByRemovingCurlyBraces/>, Vol: <$Volume.stringByRemovingCurlyBraces/>, <$Year.stringByRemovingCurlyBraces/>, 
+doi: http://dx.doi.org/<$Doi.stringByRemovingCurlyBraces/>
+</$publications>
