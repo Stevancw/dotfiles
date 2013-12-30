@@ -4,7 +4,7 @@
 # \__ \ ||  __/\ V / (_| | | | | (__ \ V  V / 
 # |___/\__\___| \_/ \__,_|_| |_|\___| \_/\_/  
 #
-# Stevan C Wing January 2013
+# Stevan C Wing December 2013
 #---------------------------------------------
 
 ZSH=$HOME/.oh-my-zsh
@@ -21,3 +21,6 @@ alias ll="ls -lahG"
 
 # for Homebrew installed rbenv
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
