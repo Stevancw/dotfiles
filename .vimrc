@@ -4,7 +4,7 @@
 " \__ \ ||  __/\ V / (_| | | | | (__ \ V  V / 
 " |___/\__\___| \_/ \__,_|_| |_|\___| \_/\_/  
 "
-" Stevan C Wing August 2013
+" Stevan C Wing January 2014
 "---------------------------------------------
 
 execute pathogen#infect()
@@ -14,11 +14,16 @@ set autowrite 		    " write the old file out when switching between files.
 set history=50		    " keep 50 lines of command line history
 set ruler		          " show the cursor position all the time
 set showcmd		        " display incomplete commands
-set incsearch		      " do incremental searching
 set mousehide 		    " hide mouse when typing
 set number            " turn on numbers 
 set cursorline        " highlight the current line
 set showmode          " what mode am i in?
+
+" better searching
+set incsearch		      " do incremental searching
+set showmatch         " show bracket matches
+set ignorecase        " ignore case in search
+set hlsearch          " highlight all search matches
 
 syntax on                 " turn on syntax highlighting
 filetype plugin indent on " turn on indent and filetype
@@ -53,6 +58,19 @@ imap <Tab> <C-N>
 imap <C-L> <Space>=><Space>
 
 colorscheme xoria256
+
+" rename current file, via Gary Bernhardt
+function! RenameFile()
+  let old_name = expand('%')
+  let new_name = input('New file name: ', expand('%'))
+  if new_name != '' && new_name != old_name
+    exec ':saveas ' . new_name
+    exec ':silent !rm ' . old_name
+    redraw!
+  endif
+endfunction
+map <leader>n :call RenameFile()<cr>
+
 
 "----------------------------------------------
 
