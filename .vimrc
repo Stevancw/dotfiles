@@ -20,10 +20,11 @@ set cursorline        " highlight the current line
 set showmode          " what mode am i in?
 
 " better searching
-set incsearch		      " do incremental searching
-set showmatch         " show bracket matches
-set ignorecase        " ignore case in search
-set hlsearch          " highlight all search matches
+set incsearch		                                " do incremental searching
+set showmatch                                   " show bracket matches
+set ignorecase                                  " ignore case in search
+set hlsearch                                    " highlight all search matches
+nnoremap <backspace> :let @/= ""<CR><backspace> " clear the serch buffer with backspace
 
 syntax on                 " turn on syntax highlighting
 filetype plugin indent on " turn on indent and filetype
@@ -57,26 +58,27 @@ vmap D y'>p
 imap <Tab> <C-N>
 imap <C-L> <Space>=><Space>
 
-" colorscheme xoria256
+colorscheme xoria256
+" colorscheme Lucius
 
 " Chris Hunt's colour-scheme settings
-set background=dark
-colorscheme base16-railscasts
-
-highlight clear SignColumn
-highlight VertSplit    ctermbg=236
-highlight ColorColumn  ctermbg=237
-highlight LineNr       ctermbg=236 ctermfg=240
-highlight CursorLineNr ctermbg=236 ctermfg=240
-highlight CursorLine   ctermbg=236
-highlight StatusLineNC ctermbg=238 ctermfg=0
-highlight StatusLine   ctermbg=240 ctermfg=12
-highlight IncSearch    ctermbg=0   ctermfg=3
-highlight Search       ctermbg=0   ctermfg=9
+" set background=dark
+" colorscheme base16-railscasts
+" 
+" highlight clear SignColumn
+" highlight VertSplit    ctermbg=236
+" highlight ColorColumn  ctermbg=237
+" highlight LineNr       ctermbg=236 ctermfg=240
+" highlight CursorLineNr ctermbg=236 ctermfg=240
+" highlight CursorLine   ctermbg=236
+" highlight StatusLineNC ctermbg=238 ctermfg=0
+" highlight StatusLine   ctermbg=240 ctermfg=12
+" highlight IncSearch    ctermbg=0   ctermfg=3
+" highlight Search       ctermbg=0   ctermfg=9
 highlight Visual       ctermbg=3   ctermfg=0
-highlight Pmenu        ctermbg=240 ctermfg=12
-highlight PmenuSel     ctermbg=0   ctermfg=3
-highlight SpellBad     ctermbg=0   ctermfg=1
+" highlight Pmenu        ctermbg=240 ctermfg=12
+" highlight PmenuSel     ctermbg=0   ctermfg=3
+" highlight SpellBad     ctermbg=0   ctermfg=1
 
 
 " rename current file, via Gary Bernhardt
@@ -92,9 +94,8 @@ endfunction
 map <leader>n :call RenameFile()<cr>
 
 
-"----------------------------------------------
-
 "Plugin configurations 
+"----------------------------------------------
 
 "Map ctrl + n to open NERDTree
 map <C-n> :NERDTreeToggle<CR>
