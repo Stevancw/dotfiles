@@ -4,7 +4,7 @@
 # \__ \ ||  __/\ V / (_| | | | | (__ \ V  V / 
 # |___/\__\___| \_/ \__,_|_| |_|\___| \_/\_/  
 #
-# Stevan C Wing December 2013
+# Stevan C Wing January 2014
 #---------------------------------------------
 
 ZSH=$HOME/.oh-my-zsh
@@ -24,3 +24,10 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+
+### Set the default editor
+export EDITOR='vim'
+
+### Set up for tumxinator
+source ~/.bin/tmuxinator.zsh
+
