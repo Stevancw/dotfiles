@@ -106,4 +106,6 @@ autocmd vimenter * if !argc() | NERDTree | endif
 "Faster shortcut for commenting. Requires T-Comment plugin
 map <leader>c <c-_><c-_>
 
+" Arduino (ino)
+" let g:vim_arduino_auto_open_serial = 1
 "----------------------------------------------
